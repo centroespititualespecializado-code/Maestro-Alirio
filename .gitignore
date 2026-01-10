@@ -1,0 +1,6 @@
+# Ignorar configuración local sensible
+supabase-config.js
+
+# Dependencias / IDE
+/node_modules/
+.vscode/

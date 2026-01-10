@@ -1,0 +1,98 @@
+/* Estilos básicos y paleta morada */
+:root{
+  --purple-900:#0b0427;
+  --purple-800:#1a0a36;
+  --purple-600:#4b1260;
+  --purple-500:#6d1b7b;
+  --accent:#ff8a00; /* naranja para resaltar */
+  --green:#25d366; /* whatsapp */
+  --muted:#b4a8c9;
+}
+*{box-sizing:border-box}
+body{font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Arial; margin:0;color:#f1eef6;background:linear-gradient(180deg,var(--purple-900),var(--purple-800));-webkit-font-smoothing:antialiased}
+.container{max-width:1100px;margin:0 auto;padding:1rem}
+
+/* Header / Nav */
+.site-header{position:sticky;top:0;z-index:30;background:rgba(0,0,0,0.5);backdrop-filter:blur(6px);padding:0.8rem 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+.nav-wrap{display:flex;align-items:center;gap:1rem;justify-content:space-between}
+.brand{font-weight:800;color:#fff}
+.brand-accent{color:var(--accent)}
+.main-nav a{color:#e9def6;text-decoration:none;margin-right:1rem;font-weight:600}
+.btn-outline{border:1px solid var(--accent);padding:0.45rem 0.9rem;border-radius:8px;color:var(--accent);text-decoration:none;font-weight:700}
+
+/* HERO */
+.hero{position:relative;background-size:cover;background-position:center;min-height:420px;display:flex;align-items:center;color:#fff;margin-bottom:1.5rem}
+.hero .overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(29,8,45,0.65),rgba(29,8,45,0.82));}
+.hero-inner{position:relative;padding:3rem 1rem;text-align:center}
+.hero h1{font-family:'Playfair Display', serif;font-size:42px;margin:0 0 0.6rem;color:#fff;letter-spacing:0.4px}
+.hero .lead{color:var(--muted);max-width:740px;margin:0 auto 1rem}
+.btn-primary{background:var(--accent);color:#111;padding:0.85rem 1.25rem;border-radius:10px;text-decoration:none;font-weight:800}
+
+/* Modules layout */
+.modules{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:0}
+.module{background:transparent;padding:1rem;border-radius:8px}
+.module h2{margin-top:0;color:#ffefe8;font-size:24px}
+
+/* Cards para servicios */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:0.75rem}
+.card{background:#fff;border-radius:12px;padding:1.25rem;box-shadow:0 10px 30px rgba(19,6,33,0.45);color:#2b1530;text-align:center}
+.card-icon{width:56px;height:56px;margin-bottom:0.5rem}
+.card h3{margin:0 0 0.5rem;font-size:20px;color:#2b1530}
+.card p{color:#6e586f;margin-bottom:1rem}
+.card-cta{display:flex;flex-direction:column;gap:0.5rem;align-items:center}
+.btn-green{background:var(--green);color:#fff;padding:0.6rem 1rem;border-radius:999px;text-decoration:none;font-weight:800}
+.phone{font-weight:800;color:#2b1530}
+
+/* Acordeón/benefits left as is but with color adjustments */
+.accordion-item{width:100%;text-align:left;padding:0.8rem 1rem;border:1px solid rgba(255,255,255,0.06);border-radius:6px;background:rgba(255,255,255,0.02);margin-bottom:0.5rem;cursor:pointer;font-weight:700;color:#fff}
+.accordion-item[aria-expanded="true"]{background:linear-gradient(90deg,var(--purple-500),#8b4bb8);color:#fff}
+.panel{padding:0.75rem 1rem;border-left:3px solid rgba(255,255,255,0.08);margin-bottom:0.75rem;background:rgba(255,255,255,0.02);color:var(--muted)}
+
+/* Galería */
+.gallery{margin-top:1rem}
+.gallery .photos{display:grid;grid-template-columns:repeat(3,1fr);gap:0.6rem}
+.gallery .photos img{width:100%;height:160px;object-fit:cover;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:#ffffff}
+
+/* WhatsApp CTA */
+.whatsapp-cta{position:fixed;right:20px;bottom:20px;background:var(--green);color:#fff;padding:0.9rem 1.1rem;border-radius:999px;text-decoration:none;box-shadow:0 12px 30px rgba(37,211,102,0.18);font-weight:700;display:flex;align-items:center;gap:0.6rem}
+.whatsapp-cta img{filter:brightness(0) invert(1)}
+
+/* Footer */
+.site-footer{margin-top:2rem;padding:1rem 0;text-align:center;color:var(--muted)}
+
+/* Responsive */
+@media (max-width:980px){
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .hero h1{font-size:36px}
+}
+@media (max-width:760px){
+  .main-nav{display:none}
+  .cards{grid-template-columns:1fr}
+  .gallery .photos{grid-template-columns:1fr}
+  .container{padding:0.8rem}
+  .whatsapp-cta{right:12px;bottom:12px;padding:0.7rem 0.9rem}
+}
+
+/* Iconos dentro de botones */
+.icon{width:22px;height:22px;vertical-align:middle;margin-right:0.6rem;filter:grayscale(0);}
+.whatsapp-icon{width:18px;height:18px;vertical-align:middle;margin-right:0.6rem;filter:brightness(0) invert(1)}
+
+/* Galería de fotos */
+.gallery{margin-top:1rem}
+.gallery .photos{display:grid;grid-template-columns:repeat(3,1fr);gap:0.6rem}
+.gallery .photos img{width:100%;height:160px;object-fit:cover;border-radius:8px;border:1px solid #eceff1;background:#fff}
+
+@media (max-width:760px){
+  .gallery .photos{grid-template-columns:1fr}
+  .gallery .photos img{height:180px}
+}
+
+/* Loader y modal */
+.loader{padding:2rem;text-align:center;color:var(--muted);background:rgba(255,255,255,0.02);border-radius:8px}
+
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.5);z-index:60}
+.modal.hidden{display:none}
+.modal-content{background:linear-gradient(180deg,#fff,#f9f8fb);padding:1.2rem;border-radius:10px;max-width:520px;width:90%;box-shadow:0 20px 60px rgba(7,3,17,0.6);color:#1f0e24}
+.modal-close{position:absolute;right:1rem;top:0.8rem;background:transparent;border:none;font-size:20px;color:#7b6a7f}
+.modal-content h3{margin-top:0}
+.modal-content input,.modal-content textarea{width:100%;padding:0.6rem;border-radius:6px;border:1px solid #e9e0ee;margin-top:0.3rem}
