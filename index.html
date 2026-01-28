@@ -3,101 +3,32 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Centro Espiritual - Maestro Alirio</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Maestro Alirio - Centro Espiritual en México. Sanación energética, videncia, tarot, amarres de amor y protección espiritual. Ceremonias ancestrales para transformar tu vida.">
+  <meta name="keywords" content="maestro espiritual México, sanación energética, videncia México, tarot profundo, amarres de amor, protección espiritual, ceremonias ancestrales, CDMX, centro espiritual">
+  <meta name="author" content="Maestro Alirio">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="es">
+  <meta name="geo.placename" content="México">
+  <meta name="geo.region" content="MX">
+  
+  <!-- Open Graph para redes sociales -->
+  <meta property="og:title" content="Maestro Alirio - Centro Espiritual Especializado">
+  <meta property="og:description" content="Sanación energética, videncia y amarres de amor. Ceremonias ancestrales probadas para transformar tu vida.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Maestro Alirio - Centro Espiritual">
+  <meta name="twitter:description" content="Sanación energética, videncia y amarres de amor en México">
+  
+  <title>Maestro Alirio | Centro Espiritual Especializado en México</title>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <div class="brand"><span class="brand-accent">Maestro</span> Alirio <span class="mini">🔮</span></div>
-      <nav class="main-nav">
-        <a href="#inicio">Inicio</a>
-        <a href="#maestro">Maestro</a>
-        <a href="#beneficios">Beneficios</a>
-        <a href="#servicios">Servicios</a>
-      </nav>
-      <a class="btn-outline" href="https://wa.me/573249704916?text=Hola%20Maestro%20Alirio,%20quiero%20informaci%C3%B3n%20sobre%20sus%20servicios" target="_blank">Contacto</a>
-    </div>
-  </header>
-
-  <section class="hero" id="inicio" style="background-image: url('assets/photos/center-1.svg')">
-    <div class="overlay"></div>
-    <div class="container hero-inner">
-      <h1>Ceremonias para la Prosperidad</h1>
-      <p class="lead">Abre caminos de abundancia y bienestar con ceremonias ancestrales y enfoque en resultados.</p>
-      <a class="btn-primary" href="https://wa.me/573249704916?text=Hola%20Maestro%20Alirio,%20estoy%20interesado%20en%20las%20ceremonias">Contáctame</a>
-    </div>
-  </section>  
-
-  <main class="container">
-    <section class="modules">
-      <div class="module" id="servicios">
-        <h2>Servicios</h2>
-        <div class="cards" id="services-list">
-          <div class="loader">Cargando servicios...</div>
-        </div>
-      </div>
-
-      <div class="module">
-        <h2>Beneficios</h2>
-        <div class="accordion" id="benefits">
-          <button class="accordion-item" aria-expanded="false" data-target="b1"><img src="assets/icons/icon-peace.svg" class="icon" alt=""> <span>Paz interior</span></button>
-          <div class="panel" id="b1" hidden>
-            <p>Recupera serenidad, reduce la ansiedad y conecta con el silencio interior para tomar decisiones más claras.</p>
-          </div>
-
-          <button class="accordion-item" aria-expanded="false" data-target="b2"><img src="assets/icons/icon-relationships.svg" class="icon" alt=""> <span>Amor y relaciones</span></button>
-          <div class="panel" id="b2" hidden>
-            <p>Mejoras en las relaciones afectivas; ofrecemos orientación y rituales como amarres de amor y prácticas tradicionales como "aguja de calzón" según lo solicite el consultante.</p>
-          </div>
-
-          <button class="accordion-item" aria-expanded="false" data-target="b3"><img src="assets/icons/icon-protection.svg" class="icon" alt=""> <span>Protección espiritual</span></button>
-          <div class="panel" id="b3" hidden>
-            <p>Mayor sensación de seguridad y menos ataques energéticos gracias a ceremonias y limpiezas de protección.</p>
-          </div>
-
-          <button class="accordion-item" aria-expanded="false" data-target="b4"><img src="assets/icons/icon-clarity.svg" class="icon" alt=""> <span>Claridad y propósito</span></button>
-          <div class="panel" id="b4" hidden>
-            <p>Recibirás orientación para encontrar propósito y enfoque en tu vida personal y espiritual.</p>
-          </div>
-
-          <!-- Agrega más beneficios aquí si lo deseas -->
-        </div>
-      </div>
-    </section>
-
-    <section class="gallery">
-      <div class="container">
-        <h2>Galería</h2>
-        <div class="photos" id="gallery-list">
-          <img src="assets/photos/center-1.svg" alt="Interior del centro">
-          <img src="assets/photos/center-2.svg" alt="Ceremonia">
-          <img src="assets/photos/center-3.svg" alt="Ritual">
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Modal de contacto (envía a Supabase contacts) -->
-  <div id="contact-modal" class="modal hidden" aria-hidden="true">
-    <div class="modal-content">
-      <button class="modal-close" aria-label="Cerrar">&times;</button>
-      <h3>Contactar</h3>
-      <form id="contact-form">
-        <label>Nombre<br><input name="name" required></label>
-        <label>Teléfono<br><input name="phone" required></label>
-        <label>Mensaje<br><textarea name="message" rows="4" required></textarea></label>
-        <div style="margin-top:0.6rem"><button type="submit" class="btn-primary">Enviar</button></div>
-      </form>
-      <div id="contact-status" role="status" style="margin-top:.6rem"></div>
-    </div>
-  </div>
-
-  <a class="whatsapp-cta" href="https://wa.me/573249704916?text=Hola%20Maestro%20Alirio,%20quiero%20informaci%C3%B3n%20sobre%20sus%20servicios" target="_blank" rel="noopener noreferrer" aria-label="Contacto por WhatsApp"><img src="assets/icons/icon-whatsapp.svg" alt="" class="whatsapp-icon"> Publicidad / WhatsApp</a> 
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© Centro Espiritual - Maestro Alirio</p>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
     </div>
   </footer>
 

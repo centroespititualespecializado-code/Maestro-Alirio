@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /private/
+
+# Sitemaps
+Sitemap: https://maestroalirio.mx/sitemap.xml
