@@ -1,16 +1,176 @@
-# Maestro-Alirio — Centro Espiritual
+# Maestro Alirio 🔮 Centro Espiritual Especializado
 
-**Descripción**
+Sitio web profesional y moderno para Centro Espiritual - Maestro Alirio. Construido con **React 19** + **Vite** para máximo rendimiento.
 
-Sitio web simple para el *Centro Espiritual - Maestro Alirio*. Proporciona información sobre los servicios (ceremonias de protección espiritual, limpieza de amor, limpieza energética, etc.), los beneficios que ofrecen y una galería de imágenes. Incluye un botón de contacto/publicidad que abre WhatsApp al número +57 3249704916.
+## ✨ Características
 
-## Características
+- ⚡ **Vite** - Bundler ultrarrápido
+- ⚛️ **React 19** - Framework moderno
+- 📱 **Responsive** - Mobile-first design
+- 🔍 **SEO Optimizado** - Posicionado para México
+- 🎨 **Diseño Moderno** - Paleta morada + naranja
+- 💬 **Testimonios** - Sección social proof
+- 📞 **WhatsApp Integrado** - +52 5537188949
+- ♿ **Accesible** - WCAG compliant
+- 🚀 **Listo para Deploy** - Vercel/Netlify
 
-- Página estática con módulos desplegables para **Servicios** y **Beneficios**
-- Iconos SVG para cada módulo
-- Galería de fotos (placeholders SVG incluidos)
-- Botón CTA flotante que abre WhatsApp con mensaje prellenado
-- Diseño responsive y accesible (atributos `aria` para el acordeón)
+## 📦 Secciones
+
+1. **Hero** - Banner impactante con CTA
+2. **Maestro Story** - Biografía y experiencia
+3. **Servicios** - Acordeón de 5 servicios espirituales
+4. **Beneficios** - Acordeón de 4 beneficios principales
+5. **Galería** - 3 imágenes profesionales
+6. **Testimonios** - 4 comentarios de clientes reales
+7. **Contacto Modal** - Formulario con Supabase (opcional)
+
+## 🚀 Inicio Rápido
+
+```bash
+# Clonar
+git clone https://github.com/centroespititualespecializado-code/Maestro-Alirio.git
+cd Maestro-Alirio
+
+# Instalar
+npm install
+
+# Desarrollo
+npm run dev
+
+# Build producción
+npm run build
+
+# Preview build
+npm run preview
+```
+
+## 🔧 Configuración
+
+### Variables de Entorno (.env)
+
+```env
+VITE_SUPABASE_URL=https://your-project.supabase.co
+VITE_SUPABASE_KEY=your-anon-key
+```
+
+### Cambiar Número de WhatsApp
+
+Edita estos archivos:
+- `src/components/Hero.jsx`
+- `src/components/Services.jsx`
+- `src/components/WhatsAppCTA.jsx`
+- `src/components/Testimonials.jsx`
+
+Busca y reemplaza: `525537188949`
+
+## 🖼️ Imágenes Requeridas
+
+Coloca en `assets/photos/`:
+- `img1.jpeg` - Galería imagen 1
+- `img3.webp` - Galería imagen 2
+- `img4.jpg` - Galería imagen 3
+- `maestro.jpg` - Foto del Maestro Alirio
+- `hero.jpg` - Imagen hero
+
+## 📊 SEO
+
+El sitio está optimizado para:
+- Meta tags con keywords para México
+- Schema JSON-LD (LocalBusiness)
+- sitemap.xml
+- robots.txt
+- Geolocalización (México)
+- Open Graph para redes sociales
+
+## 🌐 Despliegue
+
+Ver [DEPLOYMENT.md](./DEPLOYMENT.md) para instrucciones detalladas.
+
+**Recomendado:** Vercel (gratuito, automático)
+
+```bash
+npm install -g vercel
+vercel
+```
+
+## 📁 Estructura
+
+```
+src/
+├── components/
+│   ├── Header.jsx
+│   ├── Hero.jsx
+│   ├── MaestroStory.jsx
+│   ├── Services.jsx
+│   ├── Benefits.jsx
+│   ├── Gallery.jsx
+│   ├── Testimonials.jsx
+│   ├── ContactModal.jsx
+│   ├── WhatsAppCTA.jsx
+│   ├── Footer.jsx
+│   └── SEOSchema.jsx
+├── config/
+│   └── supabase-config.js
+├── styles/
+│   └── index.css
+├── App.jsx
+└── main.jsx
+public/
+├── robots.txt
+├── sitemap.xml
+└── [imágenes]
+```
+
+## 🎯 Personalización
+
+### Colores
+Edit `src/styles/index.css`:
+```css
+:root {
+  --purple-900: #0b0427;
+  --purple-500: #6d1b7b;
+  --accent: #ff8a00;
+  --green: #25d366;
+}
+```
+
+### Textos y Contenido
+Edit componentes en `src/components/`
+
+### Testimonios
+Actualiza array en `src/components/Testimonials.jsx`
+
+## 📱 Responsive
+
+- Desktop: Grid 3 columnas
+- Tablet: Grid 2 columnas
+- Mobile: Grid 1 columna
+- Breakpoints: 980px, 760px
+
+## ⚙️ Scripts
+
+```bash
+npm run dev      # Desarrollo
+npm run build    # Build para producción
+npm run preview  # Preview local de build
+npm run lint     # ESLint (cuando configure)
+```
+
+## 📞 Soporte
+
+Para cambios en servicios, beneficios o testimonios, edita los arrays de datos en cada componente.
+
+## 📄 Licencia
+
+ISC
+
+## 👨‍💻 Desarrollador
+
+Maestro Alirio © 2026
+
+---
+
+**Última actualización:** 28 de enero de 2026
 
 ## Estructura del proyecto
 

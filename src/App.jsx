@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Analytics from './components/Analytics'
 import Benefits from './components/Benefits'
 import ContactModal from './components/ContactModal'
 import Footer from './components/Footer'
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <div className="app">
+      <Analytics />
       <SEOSchema />
       <Header onContactClick={() => setShowModal(true)} />
       <Hero />
