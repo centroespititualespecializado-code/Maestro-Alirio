@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 
 function Header({ onContactClick }) {
   return (
@@ -23,6 +24,10 @@ function Header({ onContactClick }) {
       </div>
     </header>
   )
+}
+
+Header.propTypes = {
+  onContactClick: PropTypes.func.isRequired
 }
 
 export default Header

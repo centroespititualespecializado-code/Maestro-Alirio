@@ -23,8 +23,8 @@ function Gallery() {
       <div className="container">
         <h2>Galería</h2>
         <div className="photos">
-          {photos.map((photo, index) => (
-            <figure key={index} className="photo-item">
+          {photos.map((photo) => (
+            <figure key={photo.src} className="photo-item">
               <img 
                 src={photo.src} 
                 alt={photo.alt}

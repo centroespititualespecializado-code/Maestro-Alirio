@@ -10,9 +10,9 @@ function Analytics() {
       script.async = true
       document.head.appendChild(script)
 
-      window.dataLayer = window.dataLayer || []
+      globalThis.dataLayer = globalThis.dataLayer || []
       function gtag() {
-        window.dataLayer.push(arguments)
+        globalThis.dataLayer.push(arguments)
       }
       gtag('js', new Date())
       gtag('config', googleAnalyticsId)

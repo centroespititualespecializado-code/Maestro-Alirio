@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { useState } from 'react'
 import { supabaseClient } from '../config/supabase-config'
 
@@ -99,10 +100,15 @@ function ContactModal({ isOpen, onClose }) {
             </button>
           </div>
         </form>
-        {status && <div role="status" style={{ marginTop: '.6rem' }}>{status}</div>}
+        {status && <output style={{ marginTop: '.6rem', display: 'block' }}>{status}</output>}
       </div>
     </div>
   )
+}
+
+ContactModal.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired
 }
 
 export default ContactModal

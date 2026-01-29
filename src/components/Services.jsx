@@ -58,7 +58,7 @@ function Services() {
               <div className="panel">
                 <p>{service.description}</p>
                 <a 
-                  href={`https://wa.me/525537188949?text=${encodeURIComponent(`Estoy interesado en: ${service.name}`)}`}
+                  href={`https://wa.me/525537188949?text=${encodeURIComponent('Estoy interesado en: ' + service.name)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-green"

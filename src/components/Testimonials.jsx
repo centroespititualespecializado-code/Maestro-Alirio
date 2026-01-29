@@ -34,6 +34,14 @@ const TESTIMONIALS = [
   }
 ]
 
+const renderStars = (count, testimonialId) => {
+  const stars = []
+  for (let i = 0; i < count; i++) {
+    stars.push(<span key={`${testimonialId}-star-${i}`} className="star">⭐</span>)
+  }
+  return stars
+}
+
 function Testimonials() {
   return (
     <section className="testimonials" id="comentarios">
@@ -47,9 +55,7 @@ function Testimonials() {
           {TESTIMONIALS.map((testimonial) => (
             <div key={testimonial.id} className="testimonial-card">
               <div className="rating">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <span key={i} className="star">⭐</span>
-                ))}
+                {renderStars(testimonial.rating, testimonial.id)}
               </div>
               <p className="testimonial-text">"{testimonial.text}"</p>
               <div className="testimonial-footer">
@@ -65,7 +71,7 @@ function Testimonials() {
         <div className="testimonials-cta">
           <p>¿Listo para transformar tu vida?</p>
           <a 
-            href="https://wa.me/525537188949?text=Hola%20Maestro%20Alirio,%20quiero%20agendar%20una%20consulta"
+            href="https://wa.me/525537188949?text=Hola%20Maestro%20Alirio,%20vi%20su%20sitio%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20ceremonias%20y%20limpiezas."
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary"
