@@ -1,5 +1,10 @@
 # Ignorar configuración local sensible
-supabase-config.js
+# supabase-config.js - Movido a repositorio porque usa variables de entorno
+
+# Variables de entorno
+.env
+.env.local
+.env.production
 
 # Dependencias / IDE
 /node_modules/
