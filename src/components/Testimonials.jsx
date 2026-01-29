@@ -43,6 +43,12 @@ const renderStars = (count, testimonialId) => {
 }
 
 function Testimonials() {
+  const handleConversionClick = () => {
+    if (typeof window !== 'undefined' && typeof window.gtag_report_conversion === 'function') {
+      window.gtag_report_conversion()
+    }
+  }
+
   return (
     <section className="testimonials" id="comentarios">
       <div className="container">
@@ -75,6 +81,7 @@ function Testimonials() {
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary"
+            onClick={handleConversionClick}
           >
             Agendar Consulta Ahora
           </a>

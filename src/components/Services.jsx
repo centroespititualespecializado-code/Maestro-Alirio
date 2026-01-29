@@ -36,6 +36,12 @@ const SERVICES_LIST = [
 function Services() {
   const [expandedId, setExpandedId] = useState(null)
 
+  const handleConversionClick = () => {
+    if (typeof window !== 'undefined' && typeof window.gtag_report_conversion === 'function') {
+      window.gtag_report_conversion()
+    }
+  }
+
   const toggleService = (id) => {
     setExpandedId(expandedId === id ? null : id)
   }
@@ -62,6 +68,7 @@ function Services() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-green"
+                  onClick={handleConversionClick}
                 >
                   Contactar
                 </a>

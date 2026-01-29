@@ -31,6 +31,23 @@
 
     gtag('config', 'AW-17876044438');
   </script>
+  <!-- Event snippet for Vista de una página conversion page -->
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-17876044438/56HjCPGejeMbEJaV-8tC',
+          'value': 1.0,
+          'currency': 'COP',
+          'event_callback': callback
+      });
+      return false;
+    }
+  </script>
 
   <title>Maestro Alirio | Centro Espiritual Especializado en México</title>
 </head>
