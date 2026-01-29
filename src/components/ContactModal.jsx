@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import { useState } from 'react'
-import { supabaseClient } from '../config/supabase-config'
+import { supabaseClient } from '../config/supabase-config.js'
 
 function ContactModal({ isOpen, onClose }) {
   const [formData, setFormData] = useState({ name: '', phone: '', message: '' })
